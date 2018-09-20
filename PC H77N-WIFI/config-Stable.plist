@@ -12,14 +12,66 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>FiX_TMR_40000</key>
+				<key>AddDTGP</key>
 				<false/>
-				<key>FiX_WAK_200000</key>
+				<key>AddHDMI</key>
+				<false/>
+				<key>AddIMEI</key>
+				<false/>
+				<key>AddMCHC</key>
+				<false/>
+				<key>AddPNLF</key>
+				<false/>
+				<key>DeleteUnused</key>
+				<false/>
+				<key>FakeLPC</key>
+				<false/>
+				<key>FixACST</key>
+				<false/>
+				<key>FixADP1</key>
+				<false/>
+				<key>FixAirport</key>
+				<false/>
+				<key>FixDarwin</key>
+				<false/>
+				<key>FixDarwin7</key>
+				<false/>
+				<key>FixDisplay</key>
+				<false/>
+				<key>FixFirewire</key>
+				<false/>
+				<key>FixHDA</key>
+				<false/>
+				<key>FixHPET</key>
+				<false/>
+				<key>FixIDE</key>
+				<false/>
+				<key>FixIPIC</key>
+				<false/>
+				<key>FixIntelGfx</key>
+				<false/>
+				<key>FixLAN</key>
 				<false/>
 				<key>FixMutex</key>
 				<true/>
+				<key>FixRTC</key>
+				<false/>
+				<key>FixRegions</key>
+				<false/>
+				<key>FixS3D</key>
+				<false/>
+				<key>FixSATA</key>
+				<false/>
+				<key>FixSBUS</key>
+				<false/>
 				<key>FixShutdown</key>
 				<true/>
+				<key>FixTMR</key>
+				<false/>
+				<key>FixUSB</key>
+				<false/>
+				<key>FixWAK</key>
+				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
@@ -95,26 +147,52 @@
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>Cpu0Ist</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>CpuPm</string>
+			</dict>
 		</array>
 		<key>FixHeaders</key>
 		<true/>
 		<key>SSDT</key>
 		<dict>
+			<key>DoubleFirstState</key>
+			<true/>
 			<key>DropOem</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
+				<key>APLF</key>
+				<true/>
+				<key>APSN</key>
+				<true/>
 				<key>CStates</key>
-				<false/>
+				<true/>
 				<key>PStates</key>
-				<false/>
+				<true/>
+				<key>PluginType</key>
+				<true/>
 			</dict>
+			<key>NoOemTableId</key>
+			<false/>
+			<key>PluginType</key>
+			<string>1</string>
+			<key>UseSystemIO</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 nv_disable=1</string>
+		<string>dart=0 nv_disable=1 kext-dev-mode=1</string>
 		<key>DefaultVolume</key>
 		<string>Hackintosh</string>
 		<key>Legacy</key>
@@ -356,17 +434,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>01/08/2018</string>
+		<string>04/09/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM142.88Z.0125.B00.1801081338</string>
+		<string>IM131.88Z.0115.B00.1804091830</string>
 		<key>Board-ID</key>
-		<string>Mac-27ADBB7B4CEE8E61</string>
+		<string>Mac-00BE6ED71E35EB86</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>D255375004NDM668C</string>
+		<string>C02343600J9FF4PA8</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -380,7 +458,7 @@
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xE00FE137</string>
+		<string>0xE00DE137</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
@@ -392,11 +470,11 @@
 		<key>PlatformFeature</key>
 		<string>0x01</string>
 		<key>ProductName</key>
-		<string>iMac14,2</string>
+		<string>iMac13,1</string>
 		<key>SerialNumber</key>
-		<string>D25M701ZF8J4</string>
-		<key>Trust</key>
-		<true/>
+		<string>C02JT1EGDNMP</string>
+		<key>SmUUID</key>
+		<string>9A27BE72-7E06-40B7-977F-AA14402D44EA</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
@@ -407,7 +485,7 @@
 		<key>InjectSystemID</key>
 		<true/>
 		<key>NvidiaWeb</key>
-		<true/>
+		<false/>
 	</dict>
 </dict>
 </plist>
