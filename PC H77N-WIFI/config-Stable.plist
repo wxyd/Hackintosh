@@ -12,66 +12,12 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>AddDTGP</key>
-				<false/>
-				<key>AddHDMI</key>
-				<false/>
-				<key>AddIMEI</key>
-				<false/>
-				<key>AddMCHC</key>
-				<false/>
-				<key>AddPNLF</key>
-				<false/>
-				<key>DeleteUnused</key>
-				<false/>
-				<key>FakeLPC</key>
-				<false/>
-				<key>FixACST</key>
-				<false/>
-				<key>FixADP1</key>
-				<false/>
-				<key>FixAirport</key>
-				<false/>
-				<key>FixDarwin</key>
-				<false/>
-				<key>FixDarwin7</key>
-				<false/>
-				<key>FixDisplay</key>
-				<false/>
-				<key>FixFirewire</key>
-				<false/>
-				<key>FixHDA</key>
-				<false/>
-				<key>FixHPET</key>
-				<false/>
-				<key>FixIDE</key>
-				<false/>
-				<key>FixIPIC</key>
-				<false/>
-				<key>FixIntelGfx</key>
-				<false/>
-				<key>FixLAN</key>
-				<false/>
 				<key>FixMutex</key>
 				<true/>
-				<key>FixRTC</key>
-				<false/>
 				<key>FixRegions</key>
-				<false/>
-				<key>FixS3D</key>
-				<false/>
-				<key>FixSATA</key>
-				<false/>
-				<key>FixSBUS</key>
-				<false/>
+				<true/>
 				<key>FixShutdown</key>
 				<true/>
-				<key>FixTMR</key>
-				<false/>
-				<key>FixUSB</key>
-				<false/>
-				<key>FixWAK</key>
-				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
@@ -134,8 +80,6 @@
 					</data>
 				</dict>
 			</array>
-			<key>ReuseFFFF</key>
-			<false/>
 		</dict>
 		<key>DropTables</key>
 		<array>
@@ -248,11 +192,6 @@
 	</array>
 	<key>GUI</key>
 	<dict>
-		<key>Hide</key>
-		<array>
-			<string>Windows</string>
-			<string>\EFI\BOOT\BOOTX64.EFI</string>
-		</array>
 		<key>Language</key>
 		<string>en:0</string>
 		<key>Mouse</key>
@@ -282,13 +221,11 @@
 	<dict>
 		<key>Inject</key>
 		<dict>
-			<key>ATI</key>
-			<false/>
 			<key>Intel</key>
-			<false/>
-			<key>NVidia</key>
-			<false/>
+			<true/>
 		</dict>
+		<key>ig-platform-id</key>
+		<string>0x1660003</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -311,10 +248,14 @@
 			<dict>
 				<key>Comment</key>
 				<string>t1-10.8-AppleHDA-Realtek-ALC892</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>
 				ixnUEQ==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleHDA</string>
 				<key>Replace</key>
@@ -325,10 +266,14 @@
 			<dict>
 				<key>Comment</key>
 				<string>t1-AppleHDA-Resources-xml&gt;zml-(cloverALC-all_codecs)</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>
 				eG1sLnps
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleHDA</string>
 				<key>Replace</key>
@@ -339,10 +284,14 @@
 			<dict>
 				<key>Comment</key>
 				<string>t1-10.12-AppleHDA-Realtek-ALC...(cloverALC-all_codecs)</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>
 				ihnUEQ==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.12.x,10.13.x,10.14.x</string>
 				<key>Name</key>
@@ -355,10 +304,14 @@
 			<dict>
 				<key>Comment</key>
 				<string>t1-10.11-AppleHDA-Realtek-ALC...(cloverALC-all_codecs)</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>
 				gxnUEQ==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.11.x</string>
 				<key>Name</key>
@@ -412,6 +365,8 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>C02343600J9FF4PA8</string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
@@ -468,8 +423,6 @@
 		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
-		<key>NvidiaWeb</key>
-		<false/>
 	</dict>
 </dict>
 </plist>
